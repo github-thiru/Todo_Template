@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%; /* Adjusting for padding and border */
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .todo-item {
+            border: 1px solid black;
+            padding: 10px;
+            background-color: white;
+            position: relative; 
+        }
+
+        .todo-item h1 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .todo-item p {
+            margin: 5px 0 10px;
+        }
+
+        .edit-button {
+            background-color: yellow;
+            color: black;
+            margin-right: 5px;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            margin-right: 5px;
+        }
+
+        .complete-button {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="id" placeholder="Shop Name">
+    <input type="text" id="details" placeholder="Category">
+    <!-- <select id="colorPicker">
+        <option value="#ffffff">Select Color</option>
+        <option value="#ffcccc">Red</option>
+        <option value="#ccffcc">Green</option>
+        <option value="#ccccff">Blue</option>
+        <option value="#ffffcc">Yellow</option>
+        <option value="#ffccff">Pink</option>
+    </select> -->
+    <button onclick="handleTodo()">Submit</button>
+    <hr>
+    <div id="container"></div>
+
+    <script src="./script.js">
+    </script>
+</body>
+</html>
